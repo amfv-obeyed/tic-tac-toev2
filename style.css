@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: black;
+}
+
+.title {
+    color: white;
+    font-size: 50px
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    height: auto;
+    width: auto;
+}
+
+.board {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    background-color: rgb(188, 186, 184);
+    border: black solid 6px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: black   solid;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.x-o {
+    font-size: 5em;
+    font-weight: bolder;
+    color: black;
+}

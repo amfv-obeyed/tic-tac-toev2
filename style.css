@@ -31,7 +31,7 @@ body {
     width: auto;
 }
 
-.board {
+#board {
     display: flex;
     height: 500px;
     width: 500px;
@@ -54,6 +54,11 @@ body {
 }
 
 .x-o {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
     font-size: 5em;
     font-weight: bolder;
     color: black;

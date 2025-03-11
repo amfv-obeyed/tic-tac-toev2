@@ -44,6 +44,7 @@ function placeO() {
     }
     document.getElementById(choice).innerHTML += 'O'
     board[choice] = 'O'
+    checkWin()
 
 }
 

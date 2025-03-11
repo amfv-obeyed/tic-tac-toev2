@@ -1,23 +1,41 @@
 let board = ['', '', '', '', '', '', '', '' ,'' ]
 
+const winCon = [[0,1,2], [3,4,5], [6,7,8],
+                [0,3,6], [1,4,7], [2,5,8],
+                [0,4,8], [2,4,6]]
+
 function placeX(place) {
     if (board[place] != '') {return}
     document.getElementById(place)
     .innerHTML +=
     'X'
     board[place] = 'X'
+    checkWin()
+}
+
+function checkWin() {
+    for ( i=0; i < winCon.length; i++ ) {
+        console.log(board)
+        if (board[winCon[i][0]] == '' && board[winCon[i][1]] == '' && board[winCon[i][2]] == '') {return}
+         if (board[winCon[i][0]] == 'X' && board[winCon[i][1]] == 'X' && board[winCon[i][2]] == 'X' ) {
+            xWin()
+        } else if (board[winCon[i][0]] == 'O' && board[winCon[i][1]] == 'O' && board[winCon[i][2]] == 'O' ) {
+            oWin()
+} else {continue}
+}
 }
 
 
-// function placeO() {
-//     let choice = Math.floor(Math.random() * 9)
-//     if (board[choice] !== '') {rollAgain()}
-//     document.getElementById(choice)
-//     .innerHTML +=
-//     'O'
-//     board[choice] = 'O'
-//     console.log(choice)
-// }
+function xWin() {
+    document.getElementById('title').innerHTML = '!!YOU WIN!!'
+    document.getElementById('title').style.color = 'green'
+}
+
+function oWin() {
+    document.getElementById('title').innerHTML = '!!YOU LOSE!!'
+    document.getElementById('title').style.color = 'red'
+}
+
 
 function placeO() {
     let choice = Math.floor(Math.random() * 9)

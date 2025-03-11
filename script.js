@@ -10,6 +10,7 @@ function placeX(place) {
     .innerHTML +=
     'X'
     board[place] = 'X'
+    placeO()
     checkWin()
 }
 
@@ -45,7 +46,6 @@ function placeO() {
     document.getElementById(choice).innerHTML += 'O'
     board[choice] = 'O'
     checkWin()
-
 }
 
 const space0 = document.getElementById('0')
@@ -58,20 +58,20 @@ const space6 = document.getElementById('6')
 const space7 = document.getElementById('7')
 const space8 = document.getElementById('8')
 
-space0.addEventListener('click', function(){placeX(0), placeO()})
+space0.addEventListener('click', function(){placeX(0)})
 
-space1.addEventListener('click', function(){placeX(1), placeO()})
+space1.addEventListener('click', function(){placeX(1)})
 
-space2.addEventListener('click', function(){placeX(2), placeO()})
+space2.addEventListener('click', function(){placeX(2)})
 
-space3.addEventListener('click', function(){placeX(3), placeO()})
+space3.addEventListener('click', function(){placeX(3)})
 
-space4.addEventListener('click', function(){placeX(4), placeO()})
+space4.addEventListener('click', function(){placeX(4)})
 
-space5.addEventListener('click', function(){placeX(5), placeO()})
+space5.addEventListener('click', function(){placeX(5)})
 
-space6.addEventListener('click', function(){placeX(6), placeO()})
+space6.addEventListener('click', function(){placeX(6)})
 
-space7.addEventListener('click', function(){placeX(7), placeO()})
+space7.addEventListener('click', function(){placeX(7)})
 
-space8.addEventListener('click', function(){placeX(8), placeO()})
+space8.addEventListener('click', function(){placeX(8)})
